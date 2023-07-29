@@ -8,7 +8,7 @@
  * @head: The address of the pointer to the first element of the list
  * @n: The number to store in the new element
  *
- * Return: A pointer to the new element
+ * Return: A pointer to the new element, or NULL on failure
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
@@ -24,8 +24,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	new->next = NULL;
 	if (*head == NULL)
 	{
-		*head = new;
 		new->prev = NULL;
+		*head = new;
 		return (new);
 	}
 	l = *head;
