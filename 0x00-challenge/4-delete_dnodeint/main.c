@@ -8,6 +8,8 @@
  *
  * Return: Always EXIT_SUCCESS.
  */
+
+
 int main(void)
 {
 	dlistint_t *head = NULL;
